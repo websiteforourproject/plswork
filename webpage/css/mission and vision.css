@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: times new roman;
+}
+
+/*----- About Us -----*/
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.75),
+            rgba(11, 156, 49, 0.5),
+            rgba(11, 156, 49, 0.5),
+            rgba(11, 156, 49, 0.5)
+        ),
+        url("/stock pictures/backround.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.MV { 
+    background: transparent;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.MV h1 {
+    color: white;
+}
+.NAH {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.MV-col {
+    flex-basis: 100%;
+    background: #32c51b;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+h3 {
+    text-align: center;
+    text-align: 600;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+.MV-col:hover {
+    box-shadow: 0 0 20px 0px rgb(125, 241, 30);
+}
+@media (max-width: 700px) {
+    .NAH {
+        flex-direction: column;
+    }
+}
+/*-----V-----*/
+.V {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.V h1{  
+    color: white;
+}
+.NP {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.V-col {
+    flex-basis: 100%;
+    background: #32c51b;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+h4 {
+    text-align: center;
+    text-align: 600;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+.V-col:hover {
+    box-shadow: 0 0 20px 0px rgb(7, 224, 32);
+}
+@media (max-width: 700px) {
+    .NP {
+        flex-direction: column;
+    }
+}
+
+.Btn {
+  top: -580px;
+  left: 1800px;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(rgba(11, 156, 49, 0.5), rgba(11, 156, 49, 0.80));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+
+.arrow path {
+  fill: white;
+}
+
+.text {
+  font-size: 0.7em;
+  width: 100px;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -18px;
+  opacity: 0;
+  transition-duration: .7s;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: .7s;
+}
+
+.Btn:hover .arrow {
+  animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

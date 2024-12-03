@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "times new roman";
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.75),
+            rgba(11, 156, 49, 0.5),
+            rgba(11, 156, 49, 0.5),
+            rgba(11, 156, 49, 0.5)
+        ),
+        url("/stock pictures/backround.jpg");
+    background-size: cover;
+    background-position: center;
+}
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container for the gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap into the next row if needed */
+  justify-content: space-between; /* Space out the items evenly */
+  gap: 20px; /* Add space between items */
+  padding: 20px;
+}
+
+/* Style for each person */
+.person {
+  display: flex;
+  align-items: center; /* Vertically center the image and text */
+  width: 30%; /* Each person will take up 30% of the container's width */
+  box-sizing: border-box;
+}
+
+/* Style for the image */
+.person img {
+  width: 100px; /* Set the image width */
+  height: 100px; /* Set the image height */
+  object-fit: cover; /* Ensure the image covers the space */
+  border-radius: 50%; /* Make the image round */
+  margin-right: 20px; /* Space between the image and the text */
+}
+
+/* Style for the info (title and description) */
+.info {
+  max-width: 60%; /* Allow text to take up the remaining space */
+}
+
+h2 {
+
+  font-size: 18px;
+      color: white;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+      color: white;
+}
+
+/* Optional: Adjust layout for small screens */
+@media (max-width: 768px) {
+  .person {
+    width: 100%; /* Stack items vertically */
+  }
+}
+
+.Btn {
+  top: -445px;
+  left: -35px;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(rgba(11, 156, 49, 0.5), rgba(11, 156, 49, 0.80));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+
+.arrow path {
+  fill: white;
+}
+
+.text {
+  font-size: 0.7em;
+  width: 100px;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -18px;
+  opacity: 0;
+  transition-duration: .7s;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: .7s;
+}
+
+.Btn:hover .arrow {
+  animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
